@@ -1,3 +1,7 @@
+@extends('layouts.auth')
+
+@section('content')
+
 <h2>Login</h2>
 <form method="POST" action="{{ route('login') }}">
     @csrf
@@ -7,3 +11,5 @@
     <input type="password" name="password" required>
     <button type="submit">Login</button>
 </form>
+
+@endsection
