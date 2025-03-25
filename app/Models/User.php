@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
+
     protected $fillable = [
         'username',
         'email',
@@ -18,11 +19,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
     ];
-  
-    protected function casts(): array
-    {
-        return [
-            'password' => 'hashed',
-        ];
-    }
+
+    protected $casts = [
+        'password' => 'hashed',
+    ];
 }
