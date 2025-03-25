@@ -3,13 +3,14 @@
 namespace App\Http\Controllers\Auth;
 
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
 
-class LoginController extends Controller
+class LogoutController extends Controller
 {
-  public function logout()
+    public function logout()
     {
-      Auth::logout();
+        Auth::logout();
 
-      return response()->json(['message' => 'Successfully logged out']);
+        return response()->json(['message' => 'Successfully logged out']);
     }
 }
