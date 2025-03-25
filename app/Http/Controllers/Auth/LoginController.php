@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Support\Facades\Auth;
+
 class LoginController extends Controller
 {
   public function showLogin()
